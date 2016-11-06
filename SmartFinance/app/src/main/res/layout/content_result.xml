@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="me.hiroaki.smartfinance.view.ResultActivity"
+    tools:showIn="@layout/activity_result">
+
+    <!-- ===================== I have ==================== -->
+    <TextView
+        android:id="@+id/i_have_RL"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/i_have"
+        android:textColor="#808080"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/yen_mark1"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignBottom="@id/i_have_RL"
+        android:layout_alignTop="@id/i_have_RL"
+        android:layout_marginStart="20dp"
+        android:layout_toStartOf="@+id/i_have"
+        android:gravity="center_vertical"
+        android:text="@string/yen"
+        android:textColor="#808080"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/i_have"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignBottom="@id/i_have_RL"
+        android:layout_alignTop="@id/i_have_RL"
+        android:layout_below="@id/name_wrapper"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:lines="1"
+        android:textColor="#808080"
+        android:textSize="32sp" />
+
+    <!-- ===================== I need ==================== -->
+    <TextView
+        android:id="@+id/i_need_RL"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_below="@id/i_have_RL"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/i_need"
+        android:textColor="#808080"
+        android:textSize="32sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignBottom="@id/i_need_RL"
+        android:layout_alignTop="@id/i_need_RL"
+        android:layout_marginStart="20dp"
+        android:layout_toStartOf="@+id/i_need"
+        android:gravity="center_vertical"
+        android:text="@string/yen"
+        android:textColor="#808080"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/i_need"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignBottom="@id/i_need_RL"
+        android:layout_alignTop="@id/i_need_RL"
+        android:layout_below="@id/i_have_RL"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:lines="1"
+        android:textColor="#808080"
+        android:textSize="32sp" />
+
+    <!-- ===================== Potential ==================== -->
+    <TextView
+        android:id="@+id/potential_RL"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_below="@id/i_need_RL"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/potential"
+        android:textColor="#808080"
+        android:textSize="32sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignBottom="@id/potential_RL"
+        android:layout_alignTop="@id/potential_RL"
+        android:layout_marginStart="20dp"
+        android:layout_toStartOf="@+id/potential"
+        android:gravity="center_vertical"
+        android:text="@string/yen"
+        android:textColor="#808080"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/potential"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignBottom="@id/potential_RL"
+        android:layout_alignTop="@id/potential_RL"
+        android:layout_below="@id/i_need_RL"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:lines="1"
+        android:textColor="#808080"
+        android:textSize="32sp" />
+
+    <!-- ===================== Advice ==================== -->
+    <TextView
+        android:id="@+id/advice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/potential_RL"
+        android:layout_marginBottom="16dp"
+        android:textColor="#808080"
+        android:textSize="26sp" />
+
+</RelativeLayout>
