@@ -51,8 +51,10 @@
 より適切なアドバイスを提供できるよう、さらに多くのAPIや経済学的なアルゴリズムを試したい
 
 ### 注力したこと（こだわり等）
-* AndrodとiOS両方での実装を行った
+* AndroidとiOS両方での実装を行った
 * 非常に多くのfinancialAPIを比較検討した
+* It was hard to find a free fintech API that integrated with mobile applications
+  モバイルアプリケーションと統合無料フィンテックのAPIを見つけることが難しかったです
 
 ## 開発技術
 ### 活用した外部技術
