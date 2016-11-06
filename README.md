@@ -58,11 +58,18 @@
 ### 活用した外部技術
 #### API・データ
 * https://poi.apache.org/apidocs/org/apache/poi/ss/formula/functions/FinanceLib.html
-* 
+* http://xignite.github.io/JavaSDK/
+* https://github.com/kulsuri/financial-calculation-app
+* https://www.xignite.com/product/global-stock-quote-data/api/GetTopMarketMovers/
 
 #### フレームワーク・ライブラリ・モジュール
-* 
-* 
+* I was in charge of getting APIs to integrate with our system and also make sure that the financial calculations worked.
+* I also made the logic behind the application in terms of variables, screens, and I/O.  There is plently of potential to add * on to this application to make it better so we made to sure to make the base of the application workable so that we can add * on to it later.  
+<br> 
+* For the financial calculations I had two options: find an API to take the input and get output or create the equations       * native to the application and have it run this way.  Finding an API was not easy so I took on the task of having the        * calculations be a part of the application first.  After, I also found a financial calculator API that had a similar         * function.
+<br>
+* As part of the results on the Smart Finance application we included a section for Potential Options/Advice.  This includes   * jobs, investments/equities, and other methods that are better than the current ones that the user inputted.  To get these   * results, we needed to get data through an APIs that include relevant information and then somehow compare the best options      * given from the APIs to the users' accounts and only display options that are better.
+
 
 #### デバイス
 * iPhone
