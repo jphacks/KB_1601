@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccountEntity" representedClassName="AccountEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="accID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kind" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assetRelarion" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AssetEntity" inverseName="kind" inverseEntity="AssetEntity" syncable="YES"/>
+        <relationship name="debtRelation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DebtEntity" inverseName="kind" inverseEntity="DebtEntity" syncable="YES"/>
+        <relationship name="jobRelation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="JobEntity" inverseName="kind" inverseEntity="JobEntity" syncable="YES"/>
+    </entity>
+    <entity name="AssetEntity" representedClassName="AssetEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="assetID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="balance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="interest" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="kind" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AccountEntity" inverseName="assetRelarion" inverseEntity="AccountEntity" syncable="YES"/>
+    </entity>
+    <entity name="DebtEntity" representedClassName="DebtEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="balance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="debtID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="interest" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="payment" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="kind" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AccountEntity" inverseName="debtRelation" inverseEntity="AccountEntity" syncable="YES"/>
+    </entity>
+    <entity name="ExpenseEntity" representedClassName="ExpenseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="expenseID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="interest" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="purchaseTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="JobEntity" representedClassName="JobEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="freqency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="jobID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="salary" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="kind" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AccountEntity" inverseName="jobRelation" inverseEntity="AccountEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AccountEntity" positionX="-18" positionY="27" width="128" height="135"/>
+        <element name="AssetEntity" positionX="216" positionY="270" width="128" height="120"/>
+        <element name="DebtEntity" positionX="223" positionY="54" width="128" height="135"/>
+        <element name="JobEntity" positionX="216" positionY="-153" width="128" height="105"/>
+        <element name="ExpenseEntity" positionX="90" positionY="0" width="128" height="135"/>
+    </elements>
+</model>
